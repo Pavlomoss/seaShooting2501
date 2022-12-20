@@ -268,7 +268,8 @@ class Game:
             board = self.random_place()
         return board
 
-    def poster(self):
+    @staticmethod
+    def poster():
         print(f'\n'
               f'                        и г р а        \n'
               f'                      МОРСКОЙ  БОЙ        \n'
@@ -317,11 +318,8 @@ class Game:
 
             num += 1
 
-    def start(self):
-        self.poster()
-        self.game_step()
-
 
 if __name__ == '__main__':
     g = Game()
-    g.start()
+    g.poster()
+    g.game_step()
