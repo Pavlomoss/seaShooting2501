@@ -28,8 +28,8 @@ class Point:
     def __repr__(self):
         return f'({self.x}, {self.y})'
 
-    def __eq__(self, any):
-        return self.x == any.x and self.y == any.y
+    def __eq__(self, anyone):
+        return self.x == anyone.x and self.y == anyone.y
 
 
 class Ship:
@@ -188,10 +188,10 @@ class AI(Player):
                     d1 = Point(p.x, p.y - 1)
                     d2 = Point(p.x, p.y - 2)
 
-                    if any ([(a1 and a2 in self.enemy_board.fine_shot),
-                             (b1 and b2 in self.enemy_board.fine_shot),
-                             (c1 and c2 in self.enemy_board.fine_shot),
-                             (d1 and d2 in self.enemy_board.fine_shot)]):
+                    if any([(a1 and a2 in self.enemy_board.fine_shot),
+                            (b1 and b2 in self.enemy_board.fine_shot),
+                            (c1 and c2 in self.enemy_board.fine_shot),
+                            (d1 and d2 in self.enemy_board.fine_shot)]):
                         ts = p
                         break
                     else:
